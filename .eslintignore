@@ -1,0 +1,10 @@
+# Ignore built files except build/index.js
+build/*
+!build/index.js
+
+# Ignore flow-typed folders
+
+flow-typed/*
+sequelize/*
+custom-definitions/*
+lib/*

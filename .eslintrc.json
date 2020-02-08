@@ -1,0 +1,32 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": ["wesbos"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "plugins": ["prettier", "eslint-plugin-flowtype"],
+  "rules": {
+    "flowtype/define-flow-type": [2],
+    "flowtype/delimiter-dangle": [2, "always-multiline"],
+    "no-shadow": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": false,
+        "singleQuote": true,
+        "printWidth": 120,
+        "tabWidth": 2
+      }
+    ]
+  },
+  "settings": {
+    // "import/resolver": {
+    //   "babel-module": {}
+    // }
+  }
+}

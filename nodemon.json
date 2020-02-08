@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ext": "js",
+  "ignore": ["*.json"],
+  "exec": "nodemon src/index.js --exec babel-node"
+}
