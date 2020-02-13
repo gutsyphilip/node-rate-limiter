@@ -13,7 +13,7 @@ const logger = createLogger({
       format: combine(format.colorize(), logFormat)
     })
   ],
-  exitOnError: false // do not exit on handled exceptions
+  exitOnError: false // do not exit on handled exceptionsn
 });
 
 export default logger;

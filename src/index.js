@@ -1,4 +1,3 @@
-// @flow strict
 import bodyParser from 'body-parser';
 import express from 'express';
 import morgan from 'morgan';
@@ -7,6 +6,7 @@ import jsend from 'jsend';
 import { logger } from './helpers';
 import config from './config';
 import { errorHandler } from './middlewares';
+import { booksRouter } from './api/books';
 
 // Essential globals
 const app = express();
@@ -27,11 +27,9 @@ app.use(
 app.use(jsend.middleware);
 
 // Initialize API routing
-app.use('/', (req, res) => {
-  res.send('Simple Node Starter by Philip Obosi');
-});
+app.use('/books', booksRouter);
 
-app.listen(config.PORT, () => {
+app.listen(config.APP.PORT, () => {
   logger.info(`Starting Watchtower on  port ${config.APP.PORT}`);
 });
 
