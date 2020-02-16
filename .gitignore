@@ -45,7 +45,7 @@ jspm_packages
 .idea
 
 # ignore .env
-.env*
+.env
 export_var.sh
 
 # ignore log files
