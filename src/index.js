@@ -7,6 +7,7 @@ import { logger } from './helpers';
 import config from './config';
 import { errorHandler } from './middlewares';
 import { booksRouter } from './api/books';
+import { customRedisRateLimiter, rateLimiterUsingThirdParty } from './middlewares';
 
 // Essential globals
 const app = express();
@@ -25,6 +26,7 @@ app.use(
   })
 );
 app.use(jsend.middleware);
+app.use(customRedisRateLimiter);
 
 // Initialize API routing
 app.use('/books', booksRouter);
