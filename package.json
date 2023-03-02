@@ -44,7 +44,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "flow-bin": "^0.77.0",
     "flow-copy-source": "^2.0.9",
-    "mocha": "^5.2.0",
+    "mocha": "^10.2.0",
     "nodemon": "^1.18.10",
     "prettier": "^1.19.1"
   },
